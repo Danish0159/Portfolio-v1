@@ -1,0 +1,22 @@
+{
+  "name": "omnifood-restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danish0159/Omnifood-Restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danish0159/Omnifood-Restaurant/issues"
+  },
+  "homepage": "https://github.com/Danish0159/Omnifood-Restaurant#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

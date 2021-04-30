@@ -1,0 +1,30 @@
+// $bp-largest: 77em; //1230px     1230/16=77
+// $bp-large: 62.5em; //1000px   1000/16=62.5
+$bp-largest: 53.75em; //900px
+// $bp-small: 50em; //800px
+// $bp-small: 50em; //800px
+// $bp-smallest: 37.5em; //600px
+// @media only screen and (max-width: $bp-largest)
+// {
+
+// }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem =10px    10/16=62.5%
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+}
