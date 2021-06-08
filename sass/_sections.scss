@@ -1,7 +1,6 @@
 //***********************
 //Header section
 //****************
-
 .header {
   background-image: linear-gradient(
       rgba(39, 39, 39, 0.85),
@@ -15,24 +14,40 @@
   max-width: 100%;
   font-family: "Cutive", serif;
   color: white;
-  &-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    height: 12rem;
-    &__item {
-      font-size: 3.6rem;
-      margin: 0rem 2.3rem;
+}
+
+//Header Navigation
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  height: 12rem;
+  @media only screen and (max-width: 920px) {
+    flex-wrap: wrap;
+    height: 10rem;
+  }
+
+  &__item {
+    font-size: 3.6rem;
+    margin: 0rem 2.3rem;
+    @media only screen and (max-width: 920px) {
+      font-size: 1.6rem;
+      width: 35%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0rem 2rem;
     }
-    &__item a {
-      text-decoration: none;
-      color: white;
-      transition: all 0.2s;
-    }
-    &__item a:hover {
-      color: skyblue;
-    }
+  }
+
+  &__item a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s;
+  }
+  &__item a:hover {
+    color: skyblue;
   }
 }
 
@@ -43,37 +58,61 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  max-width: 150rem;
+  margin: auto;
   margin-top: -11rem;
+  @media only screen and (max-width: 920px) {
+    margin-top: -7rem;
+    max-width: 80%;
+    text-align: center;
+  }
+
   &__primary {
     font-weight: normal;
     font-size: 5.5rem;
+    @media only screen and (max-width: 920px) {
+      font-size: 3.6rem;
+    }
   }
 
   &__secondary {
     font-size: 4rem;
     font-weight: normal;
+    @media only screen and (max-width: 920px) {
+      font-size: 3.2rem;
+    }
   }
+
   &__btns {
     display: flex;
     margin-top: 4rem;
-    &-item {
-      font-size: 1.2rem;
-      font-weight: 600;
-      width: 210px;
-      height: 5.4rem;
-      text-align: center;
-      letter-spacing: 0.3rem;
-      margin: 0rem 4rem;
-      color: #ffffff;
-      background: transparent;
-      border: 0.3rem solid #ffffff;
-      cursor: pointer;
-      transition: all 0.5s ease-in-out;
-      &:hover,
-      &:focus {
-        background: #ffffff;
-        color: #000000;
-      }
+  }
+
+  &__btn {
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 210px;
+    height: 5.4rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    margin: 0rem 4rem;
+    color: #ffffff;
+    background: transparent;
+    border: 0.3rem solid #ffffff;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    @media only screen and (max-width: 920px) {
+      width: 140px;
+      height: 4.6rem;
+      font-size: 1rem;
+      letter-spacing: 0rem;
+      margin: 0rem 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      background: #ffffff;
+      color: #000000;
     }
   }
 }
@@ -82,21 +121,19 @@
 //About section
 //****************
 .about-section {
-  font-family: sans-serif;
   background: #f7f7f7;
   background: -moz-linear-gradient(top, #f7f7f7 4%, #e8e8e8 95%);
   background: -webkit-linear-gradient(top, #f7f7f7 4%, #e8e8e8 95%);
   background: linear-gradient(to bottom, #f7f7f7 4%, #e8e8e8 95%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e8e8e8',GradientType=0 );
-  padding: 10rem 0rem 0rem 0rem;
+  padding: 10rem 3rem 0rem 3rem;
+  text-align: center;
 }
 
-// About
+// About block
 .about {
-  width: 75%;
+  max-width: 92rem;
   margin: 0rem auto;
-  text-align: center;
-  font-size: 3.2rem;
   & > * {
     margin-bottom: 2.8rem;
   }
@@ -105,31 +142,41 @@
   }
 }
 
-// Experience
+// Experience block
 .experience {
-  width: 70%;
+  max-width: 92rem;
   margin: 0rem auto;
-  text-align: center;
   font-size: 3.2rem;
+  @media only screen and (max-width: 920px) {
+    font-size: 2.2rem;
+  }
   &__title {
     margin-bottom: 5rem;
   }
-  &__gallery {
-    &-item {
-      max-width: 150px;
-      max-height: 150px;
-      margin: 3rem 2rem;
-      transition: all 0.25s;
-      &:hover {
-        transform: scale(1.15);
-      }
+}
+
+// Experience Skills
+.skills {
+  &__item {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 3rem 2rem;
+    transition: all 0.25s;
+    @media only screen and (max-width: 920px) {
+      max-width: 120px;
+      max-height: 120px;
+      margin: 1.5rem 0.5rem;
+    }
+    &:hover {
+      transform: scale(1.15);
     }
   }
 }
 
+// Experience bottom border
 .border {
   margin: 4.8rem auto;
-  width: 60%;
+  max-width: 77rem;
   height: 3px;
   background-color: black;
 }
@@ -139,83 +186,89 @@
 //****************
 
 .portfolio-section {
-  padding: 10rem 0rem 0rem 0rem;
+  padding-top: 10rem;
   overflow: hidden;
   text-align: center;
   background: #e8e8e8;
   background: -moz-linear-gradient(
     top,
     #e8e8e8 0%,
-    #2989d8 38%,
-    #2989d8 58%,
+    #80b9e7 38%,
+    #99c8ee 73%,
     #e8e8e8 100%
   );
   background: -webkit-linear-gradient(
     top,
     #e8e8e8 0%,
-    #2989d8 38%,
-    #2989d8 58%,
+    #80b9e7 38%,
+    #99c8ee 73%,
     #e8e8e8 100%
   );
   background: linear-gradient(
     to bottom,
     #e8e8e8 0%,
-    #2989d8 38%,
-    #2989d8 58%,
+    #80b9e7 38%,
+    #99c8ee 73%,
     #e8e8e8 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#e8e8e8',GradientType=0 );
 }
 
-.portfolio__grid {
-  max-width: 90%;
+.portfolio-grid {
+  max-width: 120rem;
   margin: 10rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 3rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 3rem 10rem;
+  padding: 0rem 2rem;
 }
 
 .project {
   font-family: "Roboto", sans-serif;
-  background-color: white;
+  background-color: #f3f3f3;
+  border: 2px solid #69eb5d;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
   transition-duration: 0.5s;
   &:hover {
     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
   }
 
-  &__imgdiv {
-    &-item {
-      object-fit: cover;
-      height: 20rem;
-      width: 100%;
-      display: block;
-    }
+  &__img {
+    opacity: 1.8;
+    object-fit: cover;
+    height: 20rem;
+    width: 100%;
+    display: block;
   }
 }
 
+// Project Content
 .projectC {
   &__title {
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin: 2.7rem 0rem;
+    margin: 2rem 0rem 1rem 0rem;
   }
+
   &__skills {
     display: flex;
     align-items: center;
-    margin: 2.6rem 0rem;
+    margin: 0rem 0rem 1.4rem 0rem;
     justify-content: center;
-    &-item {
-      margin: 0rem 0.8rem;
-      background-color: #dae2ec;
-      color: #617d98;
-      padding: 0.4rem 0.5rem;
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      border-radius: 0.5rem;
-      text-transform: uppercase;
+    & p {
+      padding: 1rem;
+      font-size: 1.6rem;
     }
+  }
+
+  &__skills-item {
+    margin: 0rem 0.8rem;
+    background-color: #dae2ec;
+    color: #617d98;
+    padding: 0.4rem 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
   }
 
   &__btn {
@@ -224,18 +277,23 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0rem;
-    &-item {
-      font-size: 1.809rem;
-      font-weight: 600;
-      background-color: green;
-      color: white;
-      padding: 0.9rem 0.8rem;
-      margin: 0.3rem 2.3rem;
-      cursor: pointer;
-      transition: all 0.3s;
-      &:hover {
-        background-color: rgb(17, 170, 17);
-      }
+  }
+
+  &__btn-item {
+    font-size: 1.809rem;
+    font-weight: 600;
+    background-color: green;
+    color: white;
+    padding: 1rem 1rem;
+    margin: 0.3rem 3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    @media only screen and (max-width: 356px) {
+      margin: 0.3rem 2.2rem;
+    }
+    &:hover {
+      background-color: rgb(17, 170, 17);
     }
   }
 }
@@ -270,6 +328,7 @@
 }
 
 .contact {
+  padding: 0rem 2rem;
   overflow: hidden;
   margin: auto;
   text-align: center;
@@ -286,45 +345,57 @@
   &__title {
     font-size: 6.4rem;
     margin-bottom: 5.5rem;
+    @media only screen and (max-width: 920px) {
+      font-size: 3.2rem;
+    }
   }
-  &__description {
-    font-size: 3.2rem;
-  }
+
   &__details {
-    font-size: 3rem;
-    &-phone {
-      margin-bottom: 2rem;
-    }
-    &-phone a,
-    &-email a {
-      color: rgb(23, 22, 22);
-      text-decoration: none;
-      &:hover {
-        color: rgb(59, 55, 213);
-      }
+    font-size: 2.8rem;
+    @media only screen and (max-width: 920px) {
+      font-size: 2rem;
     }
   }
+
+  &__phone {
+    margin-bottom: 2rem;
+  }
+  &__phone a,
+  &__email a {
+    color: rgb(23, 22, 22);
+    text-decoration: none;
+    &:hover {
+      color: rgb(59, 55, 213);
+    }
+  }
+
   &__resume {
     margin-bottom: 0.5rem;
-    &-link img {
-      max-width: 100px;
-      max-height: 100px;
-      margin-top: 25px;
-      cursor: pointer;
-    }
+  }
+
+  &__resume-link img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 25px;
+    cursor: pointer;
   }
 }
-
 //***********************
 //Footer  Section
 //****************
 .footer {
-  font-size: 1.6rem;
   background-color: #2989d8;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  padding: 2.5rem 0rem;
+  &__content {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 120rem;
+    margin: auto;
+    text-align: center;
+    padding: 2.5rem 1.2rem;
+    & p {
+      font-size: 1.6rem;
+    }
+  }
 }
